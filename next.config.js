@@ -3,6 +3,12 @@ module.exports = {
 	env: {
 		customKey: 'customValue',
 	},
+	compiler: {
+		styledComponents: true,
+	},
+	images: {
+		domains: ['api.lorem.space', 'placeimg.com'],
+	},
 	compress: true,
 	async redirects() {
 		return [

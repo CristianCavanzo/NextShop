@@ -20,6 +20,7 @@ const Home = () => {
 	const products = useGetProducts(API);
 	return (
 		<React.Fragment>
+			Hola
 			<Header />
 			<Products>
 				{products.map((product, key) => (
@@ -30,4 +31,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export { Home };
