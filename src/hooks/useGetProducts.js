@@ -8,7 +8,7 @@ const useGetProducts = (API) => {
 			const { data: response } = await axios(API);
 			setProducts(response);
 		})();
-	}, []);
+	}, [API]);
 	return products;
 };
 export default useGetProducts;

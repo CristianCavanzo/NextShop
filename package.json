@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
+    "lint:fix": "eslint src/ --fix",
     "lint": "next lint",
     "build": "next build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",
     "eslint-config-prettier": "^8.5.0",

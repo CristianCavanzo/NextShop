@@ -5,47 +5,60 @@ import { Title } from '@components/Title';
 import { Label } from '@components/Label';
 import { PrimaryButton } from '@components/buttons/PrimaryButton';
 import {
-    LoginComponent,
-    FormContainer,
-    Logo,
-    Form,
+	LoginComponent,
+	FormContainer,
+	Logo,
+	Form,
 } from '@components/login/LoginComponent';
 
 const Forgot = () => {
-    return (
-        <LoginComponent>
-            <FormContainer>
-                <Logo src="./logos/logo_yard_sale.svg" alt="logo" />
+	return (
+		<LoginComponent>
+			<FormContainer>
+				<Logo
+					src="./logos/logo_yard_sale.svg"
+					alt="logo"
+				/>
 
-                <Title className="title">Create a new password</Title>
-                <SubTitle className="subtitle">
-                    Enter a new passwrd for yue account
-                </SubTitle>
+				<Title className="title">
+					Create a new password
+				</Title>
+				<SubTitle className="subtitle">
+					Enter a new passwrd for yue account
+				</SubTitle>
 
-                <Form action="/">
-                    <Label htmlFor="password" className="label">
-                        Password
-                    </Label>
-                    <Input
-                        type="password"
-                        id="password"
-                        placeholder="*********"
-                    />
+				<Form action="/">
+					<Label
+						htmlFor="password"
+						className="label"
+					>
+						Password
+					</Label>
+					<Input
+						type="password"
+						id="password"
+						placeholder="*********"
+					/>
 
-                    <Label htmlFor="new-password" className="label">
-                        Password
-                    </Label>
-                    <Input
-                        type="password"
-                        id="new-password"
-                        placeholder="*********"
-                    />
+					<Label
+						htmlFor="new-password"
+						className="label"
+					>
+						Password
+					</Label>
+					<Input
+						type="password"
+						id="new-password"
+						placeholder="*********"
+					/>
 
-                    <PrimaryButton isInput={true}>Confirm</PrimaryButton>
-                </Form>
-            </FormContainer>
-        </LoginComponent>
-    );
+					<PrimaryButton isInput={true}>
+						Confirm
+					</PrimaryButton>
+				</Form>
+			</FormContainer>
+		</LoginComponent>
+	);
 };
 
 export { Forgot };

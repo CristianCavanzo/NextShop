@@ -30,30 +30,34 @@ const Header = () => {
 			/>
 
 			<div className={HeaderStyle.navbar_left}>
-				<Image
-					src={logo}
-					alt="logo"
-					className={HeaderStyle.logo}
-				/>
+				<Link href="/">
+					<Image
+						src={logo}
+						alt="logo"
+						className={HeaderStyle.logo}
+					/>
+				</Link>
 
 				<ul>
 					<li>
 						<Link href="/login">All</Link>
 					</li>
 					<li>
-						<a href="/">Clothes</a>
+						<Link href="/">Clothes</Link>
 					</li>
 					<li>
-						<a href="/">Electronics</a>
+						<Link href="/">
+							Electronics
+						</Link>
 					</li>
 					<li>
-						<a href="/">Furnitures</a>
+						<Link href="/">Furnitures</Link>
 					</li>
 					<li>
-						<a href="/">Toys</a>
+						<Link href="/">Toys</Link>
 					</li>
 					<li>
-						<a href="/">Others</a>
+						<Link href="/">Others</Link>
 					</li>
 				</ul>
 			</div>
@@ -64,19 +68,26 @@ const Header = () => {
 						className={
 							HeaderStyle.navbar_email
 						}
+						role="menuitem"
 						onClick={handleToggle}
+						onKeyUp={handleToggle}
 					>
-						platzi@example.com
+						<p>platzi@example.com</p>
 					</li>
 					<li
 						className={
 							HeaderStyle.navbar_shopping_cart
 						}
-						onClick={handleToggleOrders}
 					>
 						<Image
 							src={shoppingCart}
 							alt="shopping cart"
+							onClick={
+								handleToggleOrders
+							}
+							onKeyUp={
+								handleToggleOrders
+							}
 						/>
 						{cart.length > 0 && (
 							<div>{cart.length}</div>

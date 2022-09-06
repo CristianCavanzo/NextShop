@@ -10,10 +10,10 @@ module.exports = {
 		'next/core-web-vitals',
 		'next',
 		'eslint:recommended',
-		'plugin:jsx-a11y:recommended',
+		'plugin:jsx-a11y/recommended',
 		'plugin:prettier/recommended',
 	],
 	rules: {
-		semi: ['error', 'always '],
+		semi: ['error', 'always'],
 	},
 };

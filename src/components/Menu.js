@@ -1,20 +1,24 @@
 import React from 'react';
 import MenuStyle from '@styles/Menu.module.css';
+import Link from 'next/link';
 
 const Menu = () => {
 	return (
 		<div className={MenuStyle.Menu}>
 			<ul>
 				<li>
-					<a href="/" className={MenuStyle.title}>
+					<Link
+						href="/"
+						className={MenuStyle.title}
+					>
 						My orders
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a href="/">My account</a>
+					<Link href="/">My account</Link>
 				</li>
 				<li>
-					<a href="/">Sign out</a>
+					<Link href="/">Sign out</Link>
 				</li>
 			</ul>
 		</div>

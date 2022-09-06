@@ -7,7 +7,11 @@ module.exports = {
 		styledComponents: true,
 	},
 	images: {
-		domains: ['api.lorem.space', 'placeimg.com'],
+		domains: [
+			'api.lorem.space',
+			'placeimg.com',
+			'images.pexels.com',
+		],
 	},
 	compress: true,
 	async redirects() {

@@ -33,6 +33,10 @@ const ProductInfo = styled.div`
 		width: 35px;
 		height: 35px;
 	}
+	button {
+		border: none;
+		background: transparent;
+	}
 	.Price {
 		font-weight: bold;
 		font-size: var(--md);
@@ -72,12 +76,17 @@ const Product = ({ product }) => {
 						{product.title}
 					</p>
 				</div>
-				<figure onClick={() => handleClick(product)}>
-					<Image
-						src={addCard}
-						alt="add product image"
-					/>
-				</figure>
+				<button
+					onClick={() => handleClick(product)}
+					onKeyUp={() => handleClick(product)}
+				>
+					<figure>
+						<Image
+							src={addCard}
+							alt="add product image"
+						/>
+					</figure>
+				</button>
 			</ProductInfo>
 		</ProductComponent>
 	);

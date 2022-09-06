@@ -3,6 +3,8 @@ import MyOrderStyle from '@styles/MyOrder.module.css';
 import { PrimaryButton } from '@components/buttons/PrimaryButton';
 import AppContext from '../context/AppContext';
 import close from '@icons/icon_close.png';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const MyOrder = () => {
 	const {
@@ -45,15 +47,21 @@ const MyOrder = () => {
 								key={`${key}_${order.title}`}
 							>
 								<figure>
-									<img
-										src={
-											order
-												.images[0]
-										}
-										alt={
-											order.title
-										}
-									/>
+									{console.log(
+										order
+											.images[0]
+									)}
+									<picture>
+										<img
+											src={
+												order
+													.images[0]
+											}
+											alt={
+												order.title
+											}
+										/>
+									</picture>
 								</figure>
 								<p>
 									{
@@ -66,7 +74,7 @@ const MyOrder = () => {
 										order.price
 									}
 								</p>
-								<img
+								<Image
 									src={
 										close
 									}
@@ -83,7 +91,11 @@ const MyOrder = () => {
 							</div>
 						))}
 					</div>
-					<PrimaryButton>Checkout</PrimaryButton>
+					<Link href="/checkout">
+						<PrimaryButton>
+							Checkout
+						</PrimaryButton>
+					</Link>
 				</div>
 			</div>
 		</aside>
