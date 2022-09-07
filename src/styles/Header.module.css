@@ -68,7 +68,8 @@
 }
 @media (max-width: 640px) {
 	.menu {
-		display: block;
+		display: grid;
+		place-content: center;
 	}
 	.navbar_left ul {
 		display: none;

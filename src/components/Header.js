@@ -23,11 +23,9 @@ const Header = () => {
 	};
 	return (
 		<nav className={HeaderStyle.nav}>
-			<Image
-				src={menu}
-				alt="menu"
-				className={HeaderStyle.menu}
-			/>
+			<picture className={HeaderStyle.menu}>
+				<img src={menu.src} alt="menu" />
+			</picture>
 
 			<div className={HeaderStyle.navbar_left}>
 				<Link href="/">
